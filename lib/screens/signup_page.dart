@@ -248,6 +248,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 height: 26.7,
               ),
               ButtonWidget(
+                color: Colors.white,
                 text: 'Sign up',
                 onTap: () {
                   Navigator.of(context)

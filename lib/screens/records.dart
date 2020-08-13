@@ -100,6 +100,9 @@ class _Page1State extends State<Page1> {
     return Container(
       child: Column(
         children: <Widget>[
+          SizedBox(
+            height: 15,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15),
             child: Row(

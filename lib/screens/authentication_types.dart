@@ -9,6 +9,8 @@ import '../play_ui/play_ui.dart';
 import './login_page.dart';
 import './signup_page.dart';
 
+import '../screens/dashboard.dart';
+
 class AuthenticationTypesPage extends StatefulWidget {
   static const screen_id = "/authentication_type";
   @override
@@ -73,7 +75,7 @@ class _AuthenticationTypesPageState extends State<AuthenticationTypesPage> {
                       icon: SvgPicture.asset("assets/images/google-icon.svg",
                           height: 20, width: 20),
                       onTap: () {
-                        print("Login with Twitter Pressed");
+                        Navigator.of(context).pushNamed(Dashboard.screen_id);
                       },
                     ),
                   ],

@@ -7,6 +7,7 @@ import 'select_transaction.dart';
 import './dashboardpage.dart';
 import '../screens/records.dart';
 import '../screens/wallets.dart';
+import '../screens/settings.dart';
 
 class Dashboard extends StatefulWidget {
   static const screen_id = "/dashboard";
@@ -43,7 +44,7 @@ class _DashboardState extends State<Dashboard> {
     {"title": "Dashboard", "page": DashboardPage()},
     {"title": "Wallets", "page": Wallet()},
     {"title": "Records", "page": Records()},
-    {"title": "Record", "page": DashboardPage()},
+    {"title": "Settings", "page": Settings()},
   ];
 
   void changepage() {
@@ -51,7 +52,7 @@ class _DashboardState extends State<Dashboard> {
       setState(() {
         button0 = const Color(0xffe3a33d);
         button1 = const Color(0xff386785);
-        button2 = Colors.white;
+        button2 = const Color(0xff386785);
         button3 = const Color(0xff386785);
         button4 = const Color(0xff386785);
       });
@@ -61,7 +62,7 @@ class _DashboardState extends State<Dashboard> {
       setState(() {
         button0 = const Color(0xff386785);
         button1 = const Color(0xffe3a33d);
-        button2 = Colors.white;
+        button2 = const Color(0xff386785);
         button3 = const Color(0xff386785);
         button4 = const Color(0xff386785);
       });
@@ -81,21 +82,11 @@ class _DashboardState extends State<Dashboard> {
       setState(() {
         button0 = const Color(0xff386785);
         button1 = const Color(0xff386785);
-        button2 = Colors.white;
+        button2 = const Color(0xff386785);
         button3 = const Color(0xffe3a33d);
         button4 = const Color(0xff386785);
       });
       print("3");
-    }
-    if (selectedTab == 4) {
-      setState(() {
-        button0 = const Color(0xff386785);
-        button1 = const Color(0xff386785);
-        button2 = Colors.white;
-        button3 = const Color(0xff386785);
-        button4 = const Color(0xffe3a33d);
-      });
-      print("4");
     }
   }
 
@@ -129,7 +120,7 @@ class _DashboardState extends State<Dashboard> {
             ),
           ),
         ],
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.grey.withOpacity(0.3),
         elevation: 0,
         title: Text(
           pages[selectedTab]["title"],
@@ -243,7 +234,7 @@ class _DashboardState extends State<Dashboard> {
                         shape: BoxShape.circle,
                         color: const Color(0xff315fd6),
                       ),
-                      child: Icon(Icons.add, color: button2),
+                      child: Icon(Icons.add, color: Colors.white),
                     ),
                   ),
                   GestureDetector(
@@ -258,7 +249,7 @@ class _DashboardState extends State<Dashboard> {
                           width: 60,
                           height: 20,
                           child: SvgPicture.asset(
-                            "assets/images/Horizontal_view.svg",
+                            "assets/images/history.svg",
                             color: button2,
                           ),
                         ),
@@ -281,12 +272,12 @@ class _DashboardState extends State<Dashboard> {
                           width: 60,
                           height: 20,
                           child: SvgPicture.asset(
-                            "assets/images/profile.svg",
+                            "assets/images/settings.svg",
                             color: button3,
                           ),
                         ),
                         Text(
-                          "Profile",
+                          "Settings",
                           style: TextStyle(fontSize: 10),
                         )
                       ],

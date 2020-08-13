@@ -21,6 +21,9 @@ class _DashboardPageState extends State<DashboardPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          SizedBox(
+            height: 15,
+          ),
           Container(
             padding: EdgeInsets.fromLTRB(18.3, 0, 18.3, 0),
             child: Container(
@@ -237,7 +240,11 @@ class _DashboardPageState extends State<DashboardPage> {
                                           (String value) {
                                         return DropdownMenuItem<String>(
                                           value: value,
-                                          child: Text(value),
+                                          child: Text(
+                                            value,
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
                                         );
                                       }).toList(),
                                       onChanged: (String newValue) {

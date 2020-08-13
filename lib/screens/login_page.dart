@@ -4,6 +4,8 @@ import '../play_ui/play_ui.dart';
 import '../play_ui/switch/switch_widget.dart';
 import '../play_ui/text_widget/text_widget.dart';
 
+import '../screens/dashboard.dart';
+
 import './signup_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -153,9 +155,10 @@ class _LoginPageState extends State<LoginPage> {
               height: 27,
             ),
             ButtonWidget(
+              color: Colors.white,
               text: 'Login',
               onTap: () {
-                // loginController.loginWithUsernameAndPassword(email, password);
+                Navigator.of(context).pushReplacementNamed(Dashboard.screen_id);
               },
             ),
             Container(
